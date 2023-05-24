@@ -16,16 +16,49 @@ a:visited {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  z-index: 10;
+  position: relative;
 }
 a:hover {
   font-size: 1.3rem;
   color: #2128bd;
+  z-index: 10;
+  cursor: none;
 }
 body {
   background: rgb(27, 27, 27);
   color: rgb(246, 246, 246);
   min-height: 100vh;
+  cursor: none;
+  overflow: hidden;
 }
+.mouse {
+  position: absolute;
+  border-radius: 500px;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+#cursor {
+  background: #2128bd;
+  width: 14px;
+  height: 14px;
+  z-index: 9;
+}
+#mouse1 {
+  background: white;
+  width: 100px;
+  height: 100px;
+  z-index: 7;
+  transition: 0.15s ease-out;
+}
+#mouse2 {
+  background: rgb(41, 41, 41);
+  width: 200px;
+  height: 200px;
+  z-index: 5;
+  transition: 0.25s ease-out;
+}
+
 nav {
   display: grid;
   grid-template-columns: 50% 50%;
